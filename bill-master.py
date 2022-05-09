@@ -63,7 +63,12 @@ def claculateOrderAmount():
     BlondeAleCost = ''
     message = ''
 
-# Check if empty values are submitted or icorrect data type
+# Check if empty values are submitted or incorrect data type
+# If empty value is passed, a message is displayed
+# If a value is passed, the program checks if it is number
+# If it is not, a message is
+# If it is a number, the total cost for the item ordered is calculated
+# By multiplied by the total quantity ordered and the price for the item 
     if (len(BerlinerWeisseValue) == 0):
         message = 'Berline Weisse quanity cannot be empty'
         BerlinerWeisseCost = 0.00
@@ -129,7 +134,7 @@ def claculateOrderAmount():
         else:
              message = 'Blonde Ale quanity must be a number'
              BlondeAleCost = 0.00
-        # message = 'Bill generated successfully'
+    message = 'Bill generated successfully'
     # Calculate the total costs for the items
     TotalOrderCost = str('%.2f' % (BerlinerWeisseCost + ChimayRedCost + BalticPorterCost + CreamAleCost + GermanPilsnerCost + BalticPorterCost + BlondeAleCost))
     
@@ -175,17 +180,17 @@ def resetBill():
 
 # Initialize the variables for the entries
 OrderNo = StringVar() # Holds the Order Number 
-BerlinerWeisse =   # Holds the quantity of BerlinerWeisse   
-ChimayRed =   # Holds the quantity of Chimay Red 
-BalticPorter =   # Holds the quantity of Baltic Porter 
-CreamAle =   # Holds the quantity of Cream Ale 
-GermanPilsner =   # Holds the quantity of German Pilsner 
-BlondeAle =   # Holds the quantity of Blonde Ale 
-Subtotal =   # Holds the quantity of Sub total 
-Total =   # Holds the quantity of Total 
-ServiceFee =   # Holds the quantity of Service Fee 
-VATTax =   # Holds the quantity of VAT Tax 
-Cost =   # Holds the quantity of Cost 
+BerlinerWeisse = StringVar()  # Holds the quantity of BerlinerWeisse
+ChimayRed = StringVar()  # Holds the quantity of Chimay Red
+BalticPorter = StringVar()  # Holds the quantity of Baltic Porter
+CreamAle = StringVar()  # Holds the quantity of Cream Ale
+GermanPilsner = StringVar()  # Holds the quantity of German Pilsner
+BlondeAle = StringVar()  # Holds the quantity of Blonde Ale
+Subtotal = StringVar()  # Holds the quantity of Sub total
+Total = StringVar()  # Holds the quantity of Total
+ServiceFee = StringVar()  # Holds the quantity of Service Fee
+VATTax = StringVar()  # Holds the quantity of VAT Tax
+Cost = StringVar()  # Holds the quantity of Cost
 
 # Show the labels and entry widgets
 lblreference = Label(frame1, font=('aria', 15, 'bold'),
